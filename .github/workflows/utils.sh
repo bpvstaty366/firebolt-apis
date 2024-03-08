@@ -42,9 +42,6 @@ function runTests(){
   sleep 5s
   cd ..
   echo "curl request with runTest install on initialization"
-  #echo $EXCEPTION_METHODS "EXCEPTION_METHODS"
-  EXCEPTION_METHODIS="[Lifecycle.finished, Lifecycle.state]"
-  echo $EXCEPTION_METHODIS "EXCEPTION_METHODIS"
   response=$(curl -X POST -H "Content-Type: application/json" -d '{
     "result": {
       "lmt": 0,
@@ -53,7 +50,7 @@ function runTests(){
         "navigateTo": {
           "action": "search",
           "data": {
-            "query": "{\"task\":\"runTest\",\"params\":{\"certification\":true,\"exceptionMethods\":[],\"methodsToBeExcluded\":[\"'"$EXCEPTION_METHODIS"'\"]},\"action\":\"CORE\",\"context\":{\"communicationMode\":\"SDK\"},\"metadata\":{\"target\":\"MFOS\",\"targetVersion\":\"NIL\",\"deviceModel\":\"NIL\",\"fbVersion\":\"NA\"},\"asynchronous\":false,\"appType\":\"firebolt\"}"
+            "query": "{\"task\":\"runTest\",\"params\":{\"certification\":true,\"exceptionMethods\":[],\"methodsToBeExcluded\":[\"'"$EXCEPTION_METHODS"'\"]},\"action\":\"CORE\",\"context\":{\"communicationMode\":\"SDK\"},\"metadata\":{\"target\":\"MFOS\",\"targetVersion\":\"NIL\",\"deviceModel\":\"NIL\",\"fbVersion\":\"NA\"},\"asynchronous\":false,\"appType\":\"firebolt\"}"
           },
           "context": {
             "source": "voice"
