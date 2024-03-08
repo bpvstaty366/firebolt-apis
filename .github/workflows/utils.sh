@@ -43,7 +43,7 @@ function runTests(){
   cd ..
   echo "curl request with runTest install on initialization"
   #echo $EXCEPTION_METHODS "EXCEPTION_METHODS"
-  EXCEPTION_METHODIS="Lifecycle.finished, Lifecycle.state"
+  EXCEPTION_METHODIS="[Lifecycle.finished, Lifecycle.state]"
   echo $EXCEPTION_METHODIS "EXCEPTION_METHODIS"
   response=$(curl -X POST -H "Content-Type: application/json" -d '{
     "result": {
