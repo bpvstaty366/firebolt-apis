@@ -42,7 +42,7 @@ function runTests(){
   npm start &
   sleep 5s
   cd ..
-
+  exceptionM="Lifecycle.finished"
   echo "curl request with runTest install on initialization"
   response=$(curl -X POST -H "Content-Type: application/json" -d '{
     "result": {
@@ -52,7 +52,7 @@ function runTests(){
         "navigateTo": {
           "action": "search",
           "data": {
-            "query": "{\"task\":\"runTest\",\"params\":{\"certification\":true,\"exceptionMethods\":[],\"methodsToBeExcluded\":[]},\"action\":\"CORE\",\"context\":{\"communicationMode\":\"SDK\"},\"metadata\":{\"target\":\"MFOS\",\"targetVersion\":\"NIL\",\"deviceModel\":\"NIL\",\"fbVersion\":\"NA\"},\"asynchronous\":false,\"appType\":\"firebolt\"}"
+            "query": "{\"task\":\"runTest\",\"params\":{\"certification\":true,\"exceptionMethods\":[],\"methodsToBeExcluded\":["'"$exceptionM"'"]},\"action\":\"CORE\",\"context\":{\"communicationMode\":\"SDK\"},\"metadata\":{\"target\":\"MFOS\",\"targetVersion\":\"NIL\",\"deviceModel\":\"NIL\",\"fbVersion\":\"NA\"},\"asynchronous\":false,\"appType\":\"firebolt\"}"
           },
           "context": {
             "source": "voice"
