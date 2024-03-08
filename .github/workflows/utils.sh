@@ -14,7 +14,7 @@ function runTests(){
     exit 1
   fi
 
-  git clone --branch ${PR_BRANCH} https://github.com/rdkcentral/firebolt-apis.git
+  git clone --branch ${PR_BRANCH} https://github.com/bpvstaty366/firebolt-apis.git
   echo "cd to firebolt-apis repo and compile firebolt-open-rpc.json"
   cd firebolt-apis
   npm i
@@ -41,7 +41,6 @@ function runTests(){
   npm start &
   sleep 5s
   cd ..
-
   echo "curl request with runTest install on initialization"
   response=$(curl -X POST -H "Content-Type: application/json" -d '{
     "result": {
