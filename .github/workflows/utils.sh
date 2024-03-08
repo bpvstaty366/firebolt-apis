@@ -14,7 +14,7 @@ function runTests(){
     exit 1
   fi
 
-  git clone --branch ${PR_BRANCH} https://github.com/rdkcentral/firebolt-apis.git
+  git clone --branch ${PR_BRANCH} https://github.com/bpvstaty366/firebolt-apis.git
   echo "cd to firebolt-apis repo and compile firebolt-open-rpc.json"
   cd firebolt-apis
   npm i
