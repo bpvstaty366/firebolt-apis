@@ -20,6 +20,7 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
           PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
           EXCLUDED_METHODS: ${{ secrets.EXCLUDED_METHODS }}
+          INTENT: ${{ secrets.INTENT }}
         run: |
           ./.github/workflows/utils.sh runTests
 
